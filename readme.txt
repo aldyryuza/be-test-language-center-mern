@@ -1,0 +1,2 @@
+- pastikan sudah menginstall docker pada laptopnya
+- jalankan perintah "docker compose up" di terminal
