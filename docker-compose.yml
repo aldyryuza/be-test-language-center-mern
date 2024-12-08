@@ -1,0 +1,22 @@
+version: "3"
+services:
+  mongodb:
+    container_name: database_container
+    image: mongo:latest
+    restart: always
+    volumes:
+      - mongo_db:/data/db
+
+  app:
+    build: .
+    ports:
+      - 5000:5000
+    environment:
+      APP_NAME: LearnDocker
+      PORT: 5000
+      MONGO_URI: mongodb://mongodb:27017/test-language-center
+    depends_on:
+      - mongodb
+
+volumes:
+  mongo_db:

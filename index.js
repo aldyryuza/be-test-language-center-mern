@@ -15,6 +15,8 @@ import AuthRoute from "./routes/authRoute.js";
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
+console.log("Using Mongo URI:", process.env.MONGO_URI);
+
 
 // Panggil koneksi database
 connectDB();
